@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4V-WC-oR5">
+                                <rect key="frame" x="277" y="550" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="switchCamera:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3Yh-l3-TKr"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xVK-hS-Zvv">
+                                <rect key="frame" x="16" y="28" width="568" height="249"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygS-Vh-hjp">
+                                <rect key="frame" x="258" y="285" width="84" height="30"/>
+                                <state key="normal" title="Take Picture">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePicture:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="n9R-UT-Z4B"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xVK-hS-Zvv" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="0jt-xm-OLs"/>
+                            <constraint firstItem="xVK-hS-Zvv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="528-mw-d6Z"/>
+                            <constraint firstItem="xVK-hS-Zvv" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="BvU-Ss-rcz"/>
+                            <constraint firstItem="ygS-Vh-hjp" firstAttribute="top" secondItem="xVK-hS-Zvv" secondAttribute="bottom" constant="8" symbolic="YES" id="NOG-FC-7F0"/>
+                            <constraint firstItem="xVK-hS-Zvv" firstAttribute="centerX" secondItem="ygS-Vh-hjp" secondAttribute="centerX" id="T4v-oU-dKW"/>
+                            <constraint firstAttribute="bottom" secondItem="L4V-WC-oR5" secondAttribute="bottom" constant="20" symbolic="YES" id="igQ-Xd-4iJ"/>
+                            <constraint firstItem="L4V-WC-oR5" firstAttribute="centerX" secondItem="ygS-Vh-hjp" secondAttribute="centerX" id="tGP-4y-EBO"/>
+                            <constraint firstItem="ygS-Vh-hjp" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="xy4-uq-7V2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="picButton" destination="ygS-Vh-hjp" id="brx-ZM-697"/>
+                        <outlet property="theButton" destination="L4V-WC-oR5" id="gGc-SX-VHG"/>
+                        <outlet property="theImage" destination="xVK-hS-Zvv" id="E1S-mt-BsJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="251" y="415"/>
+        </scene>
+    </scenes>
+</document>
